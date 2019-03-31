@@ -1,0 +1,205 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+.content {
+    height: 100%;
+}
+
+#main { /*div with ps and h1 */
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px; /* move banner down */
+    padding-bottom:0;
+    margin-top:0;
+    border: solid 3px white; 
+    outline: solid 5px black;
+    overflow: hidden; /* for resultDisplay extending beyond */
+}
+
+.row {
+    min-height: 100%;
+}
+
+#banner {
+    /* margin-top: 20px;  */
+     vertical-align: center;
+     border-width: 2.5px !important; /* doesnt work when on h1 */
+     border-color:black !important;
+ }
+ 
+ h1 {
+     margin: 0; /* or else pushes banner out */
+     padding-left: 10px;
+     padding-right: 10px;
+     white-space: pre;
+     text-align: center;
+     font-family: 'Timmana', sans-serif;
+     line-height: 1;
+ }
+
+table {
+    /* height: 80% or pixels */
+    width:100%;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+td {
+    margin-left: auto; /* not centered if under balloon. so it is fixed size and no responsive? QQ */
+    margin-right: auto;
+    background-size: 100% 100%; /* not cover */
+    background-repeat: no-repeat;
+    border: 1px solid #FAF8F1;
+    vertical-align:top;  
+}
+
+/* #fillings { /* hide span text / text content of each td 
+    text-align:center;
+    display: block;
+}  */
+
+/*  green border on selected td
+.selected {
+    border-color:green;
+} */
+
+#pendingDisplay { 
+    height: auto; 
+    position: absolute; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 215px;
+    bottom: 140px;
+    left: 10px;
+    right: 10px;
+}
+
+#resultDisplay {
+    height: auto; 
+    position: absolute; /*relative to parent */
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px; /* dif*/
+    bottom: -50px; /* dif */
+    left: -40px;
+    right: 105px;
+    transform: rotate(40deg);
+    overflow: hidden; /* extra space on image, so extend beyond */
+    /* border-color: white !important;
+    border-width: 3px !important; */
+}
+
+.originalBackground { 
+    background-color: #FAF8F1;
+}
+
+.newBackground { 
+    background-color: black;
+}
+
+.originalBanner{
+    background-color:white;
+}
+
+.newBanner {
+    background-color:white;
+}
+
+.maker {
+    color: #BE1E2C;
+}
+
+.newMaker {
+    color: #3F537C;
+}
+
+/* didnt put (min-width: 320px) before */
+@media only screen and (max-width: 576px) {
+    td {
+        display: block;
+        height: 175px;
+        width: 250px; /* or else responsive */
+    }
+
+    #main {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    h1 {
+        padding-top: 29px;
+        padding-bottom: 10px;
+        font-size: 38px;
+    }
+
+    #pendingDisplay {
+        bottom: 150px;
+    }
+
+   #resultDisplay {
+        width: 400px;
+        bottom: 40px;
+        left: -30px;
+        transform: rotate(-5deg);
+    } 
+}
+
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+    td {
+        display: block;
+        height: 180px;
+        width: 250px;
+    }
+
+    h1 {
+        padding-top: 22px;
+        font-size: 45px;
+    }
+
+    #main {  /* hope correct? was visual before */
+        width: 210px;
+    }
+
+    #pendingDisplay {
+        bottom: 150px;
+    }
+
+    #resultDisplay {
+        width: 400px;
+        bottom: 40px;
+        left: 70px;
+        transform: rotate(-5deg);
+    } 
+    
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    td {
+        height: 110px;
+        width: 150px;  
+    }
+
+    h1 {
+        font-size: 50px;
+        padding-top:24px;
+    }
+} 
+
+@media only screen and (min-width: 1200px){ 
+    td {
+        height: 160px;
+        width: 100px; 
+    }
+
+    h1 {
+        font-size: 61px;
+        padding-top:30px;
+    }
+}
+
+/* didnt make responsive bottom? QQ. */ 
+/* QQ everythig messed up when open console */
+
