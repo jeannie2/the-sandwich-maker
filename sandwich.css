@@ -127,6 +127,7 @@ td {
     #main {
         padding-left: 0;
         padding-right: 0;
+        min-width:298px;
     }
 
     h1 {
