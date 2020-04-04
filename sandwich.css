@@ -127,7 +127,7 @@ td {
     #main {
         padding-left: 0;
         padding-right: 0;
-       /* min-width:298px;  /* so display content in full when smallest possible browser */
+        min-width:298px;  /* so display content in full when smallest possible browser */
     }
 
     h1 {
